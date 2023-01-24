@@ -1,6 +1,9 @@
-variable "environment" {
-  type = string
-}
-variable "project" {
-  type = string
+terraform {
+  cloud {
+    organization = "FusionIT"
+
+    workspaces {
+      name = "terraform-cloud-deploymentEnow"
+    }
+  }
 }
